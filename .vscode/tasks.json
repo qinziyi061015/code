@@ -9,9 +9,9 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${fileDirname}\${fileBasenameNoExtension}.exe",
                 "-I",
-                "C:\\Users\\覃子仪\\Desktop\\code",
+                "E:\\code",
                 "-std=c++14"
             ],
             "options": {
@@ -65,27 +65,7 @@
             ],
             "group": "build",
             "detail": "编译器: E:/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe"
-        },
-        {
-            "type": "cppbuild",
-            "label": "C/C++: g++.exe 生成活动文件",
-            "command": "E:/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                ""
-            ],
-            "options": {
-                "cwd": "E:/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": "build",
-            "detail": "编译器: E:/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe"
         }
+        
     ]
 }

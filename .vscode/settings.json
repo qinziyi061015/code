@@ -1,5 +1,9 @@
 {
-  "editor.quickSuggestions": false,
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  },
   "cph.general.defaultLanguage": "cpp",
   "cph.general.defaultLanguageTemplateFileLocation": "E:\\code\\muban.cpp",
   "cph.general.firstTime": false,
@@ -62,6 +66,8 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "iostream": "cpp",
-    "array": "cpp"
+    "array": "cpp",
+    "iosfwd": "cpp",
+    "random": "cpp"
   }
 }
