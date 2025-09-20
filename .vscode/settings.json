@@ -68,6 +68,12 @@
     "iostream": "cpp",
     "array": "cpp",
     "iosfwd": "cpp",
-    "random": "cpp"
+    "random": "cpp",
+    "string_view": "cpp",
+    "regex": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "string": "cpp",
+    "vector": "cpp"
   }
 }
