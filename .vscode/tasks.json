@@ -2,36 +2,18 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "shell",
-            "label": "task g++",
-            "command": "E:\\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\${fileBasenameNoExtension}.exe",
-                "-I",
-                "E:\\code",
-                "-std=c++14"
-            ],
-            "options": {
-                "cwd": "E:\\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\\mingw64\\bin"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": "build"
-        },
-        {
             "type": "cppbuild",
-            "label": "C/C++: g++.exe 生成活动文件",
-            "command": "E:\\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+            "label": "C/C++: Build active file (MinGW g++)",
+            "command": "E:/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
+                "-std=c++14",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I",
+                "${workspaceFolder}"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -43,29 +25,59 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "调试器生成的任务。"
+            "detail": "MinGW g++ build active file"
         },
         {
-            "type": "cppbuild",
-            "label": "C/C++: g++.exe 生成活动文件",
-            "command": "E:/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe",
+            "label": "Run active file",
+            "type": "shell",
+            "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run with input_bd.txt",
+            "type": "shell",
+            "command": "\"${fileDirname}\\${fileBasenameNoExtension}.exe\" < \"${workspaceFolder}\\input_bd.txt\"",
+            "options": {
+                "cwd": "${fileDirname}",
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": ["/d", "/c"]
+                }
+            },
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run with sample (cmd)",
+            "type": "shell",
+            "command": "\"${fileDirname}\\${fileBasenameNoExtension}.exe\" < \"${workspaceFolder}\\input_sample.txt\"",
+            "options": {
+                "cwd": "${fileDirname}",
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": ["/d", "/c"]
+                }
+            },
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run via batch with sample",
+            "type": "shell",
+            "command": "${workspaceFolder}\\run_with_input.cmd",
             "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                ""
+                "${workspaceFolder}\\input_sample.txt"
             ],
             "options": {
-                "cwd": "E:/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin"
+                "cwd": "${fileDirname}"
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": "build",
-            "detail": "编译器: E:/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe"
+            "group": "test",
+            "problemMatcher": []
         }
-        
     ]
 }
