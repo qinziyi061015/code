@@ -28,6 +28,46 @@
             "detail": "MinGW g++ build active file"
         },
         {
+            "type": "cppbuild",
+            "label": "C/C++: Build active file (DEBUG)",
+            "command": "E:/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-std=c++14",
+                "-g",
+                "-DDEBUG",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I",
+                "${workspaceFolder}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build"
+            },
+            "detail": "MinGW g++ build active file with -DDEBUG"
+        },
+        {
+            "label": "Run via batch with t5 sample",
+            "type": "shell",
+            "command": "${workspaceFolder}\\run_with_input.cmd",
+            "args": [
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${workspaceFolder}\\input_t5_sample.txt"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
             "label": "Run active file",
             "type": "shell",
             "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -72,6 +112,50 @@
             "args": [
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
                 "${workspaceFolder}\\input_sample.txt"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run via batch with concert sample",
+            "type": "shell",
+            "command": "${workspaceFolder}\\run_with_input.cmd",
+            "args": [
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${workspaceFolder}\\input_concert_sample.txt"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": "test",
+            "problemMatcher": []
+        }
+        ,
+        {
+            "label": "Run via batch with t6 sample",
+            "type": "shell",
+            "command": "${workspaceFolder}\\run_with_input.cmd",
+            "args": [
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${workspaceFolder}\\input_t6_sample.txt"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": "test",
+            "problemMatcher": []
+        }
+        ,
+        {
+            "label": "Run via batch with t7 sample",
+            "type": "shell",
+            "command": "${workspaceFolder}\\run_with_input.cmd",
+            "args": [
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${workspaceFolder}\\input_t7_sample.txt"
             ],
             "options": {
                 "cwd": "${fileDirname}"
