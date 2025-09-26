@@ -4,6 +4,15 @@
     "strings": "off",
     "other": "off"
   },
+  "task.allowAutomaticTasks": "on",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+      "args": ["-NoLogo", "-NoProfile"]
+    }
+  },
   "cph.general.defaultLanguage": "cpp",
   "cph.general.defaultLanguageTemplateFileLocation": "E:\\code\\muban.cpp",
   "cph.general.firstTime": false,
